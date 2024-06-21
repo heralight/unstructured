@@ -125,7 +125,7 @@ class HTMLDocument:
 
         # -- remove all <script> and <style> tags so we don't have to worry about accidentally
         # -- parsing elements out of those.
-        etree.strip_elements(document_tree, ["style", "header", "iframe","noscript","form"], with_tail=False)
+        etree.strip_elements(document_tree, ["style", "iframe","noscript","form"], with_tail=False)
 
         # -- remove <header> and <footer> tags if the caller doesn't want their contents --
         if self._opts.skip_headers_and_footers:
